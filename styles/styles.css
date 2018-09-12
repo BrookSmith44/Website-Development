@@ -79,16 +79,41 @@ header {
   width: 100px;
   transition: box-shadow 1s;
 }
-#navm {
-  display: none;
-}
+
 .navtop ul li:hover {
   box-shadow: inset 100px 0 0 0 white;
   color: #250944;
 }
 
-/* Responsive Header */
+/* Dropdown Menu*/
+/* Dropdown Toggle Button */
+#navm {
+  display: none;
+  background-color: #250944;
+}
 
+.dropdown-container {
+    position: relative;
+    display: inline-block;
+}
+
+#dropdown-content {
+  display: none;
+  position: absolute;
+  right: 8px;
+  top: 18px;
+  background-color: grey;
+}
+
+#dropdown-content a {
+  color: white;
+  min-width: 90px;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+}
+
+/* Responsive Header */
 /*@media only screen and (max-width: 1350px) {
   header {
     height: 90px;
@@ -110,7 +135,7 @@ header {
 }
 
 @media only screen and (max-width: 1050px) {
-  .navtop ul a {
+  .fullnav {
     visibility: hidden;
   }
   #navm {
