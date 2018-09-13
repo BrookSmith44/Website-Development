@@ -21,18 +21,21 @@
     <nav class="navtop">
       <ul>
         <!-- Full nav, shown on larger screens -->
-        <a class="fullnav" href="about.php"><li><h3><?php echo $about; ?></h3></li></a>
-        <a class="fullnav" href="services.php"><li><h3><?php echo $services; ?></h3></li></a>
-        <a class="fullnav" href="portfolio.php"><li><h3><?php echo $portfolio; ?></h3></li></a>
-        <a class="fullnav" href="contact.php"><li><h3><?php echo $contact; ?></h3></li></a>
+        <a class="fullnav" href="about.php"><li class="navopt" id="topopt"><h3><?php echo $about; ?></h3></li></a>
+        <a class="fullnav" href="services.php"><li class="navopt" id="topopt"><h3><?php echo $services; ?></h3></li></a>
+        <a class="fullnav" href="portfolio.php"><li class="navopt" id="topopt"><h3><?php echo $portfolio; ?></h3></li></a>
+        <a class="fullnav" href="contact.php"><li class="navopt" id="topopt"><h3><?php echo $contact; ?></h3></li></a>
         <!-- Button to show/hide dropdown menu, only shown on smaller screens -->
-        <button onclick="myFunction()" id='navm'><img src='Images\order.png' /></button>
+        <button class="dropbut" onclick="myFunction()" id='navm'><img src='Images\order.png' /></button>
         <!-- Dropdown Menu Content -->
         <div class="dropdown-container">
-          <div id="dropdown-content">
-            <a href="#">Link 1</a>
-            <a href="#">Link 2</a>
-            <a href="#">Link 3</a>
+          <div class="hide" id="dropdown-content">
+            <ul>
+            <a href="#"><li><h3><?php echo $about; ?></h3></li></a>
+            <a href="#"><li><h3><?php echo $services; ?></h3></li></a>
+            <a href="#"><li><h3><?php echo $portfolio; ?></h3></li></a>
+            <a href="#"><li><h3><?php echo $contact; ?></h3></li></a>
+          </ul>
           </div>
         </div>
         <script type="text/javascript">
@@ -47,12 +50,12 @@
           }
 
           // Attempt at making dropdown close when user clicks off it, doesn't work
-          /*window.onclick = function(event) {
-            if (!event.target.matches('#navm')) {
-              var dropdown = document.getElementById("dropdown-content");
-              dropdown.style.display = "none";
+          window.onclick = function(event) {
+            var dropdowns = document.getElementById("dropdown-content");
+            if (!event.target.matches(dropdowns)) {
+              dropdowns.style.display = "none";
             }
-          }*/
+          }
         </script>
       </ul>
     </nav>

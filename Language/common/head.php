@@ -1,6 +1,6 @@
 <?php
 $title = 'Home';
-$company = 'Spider Development';
+$company = 'Company Name';
 $about = 'About Us';
 $services = 'Services';
 $portfolio = 'Portfolio';
